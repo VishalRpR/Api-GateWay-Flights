@@ -27,6 +27,27 @@ async function signup(req,res){
         }
 }
 
+async function signin(req,res){
+    try {
+        console.log('insidecontroller')
+        const response=await UserService.signin({
+            email:req.body.email,
+            password:req.body.password
+        });
+        SuccessResponse.data=response
+        return res
+                  .status(StatusCodes.OK)
+                  .json(SuccessResponse)
+    } catch (error) {
+        console.log(error);
+        ErrorResponse.error=error;
+        return res
+                  .status(error.statusCode)
+                  .json(ErrorResponse)
+    }
+}
+
 module.exports={
-    signup
+    signup,
+    signin
 }
