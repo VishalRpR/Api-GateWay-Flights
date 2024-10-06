@@ -6,7 +6,7 @@ const { ServerConfig } = require('./config');
 const apiRoutes = require('./routes');
 const limiter = rateLimit({
 	windowMs: 2 * 60 * 1000, // 2 minutes
-	limit: 3, // Limit each IP to 3 requests per `window` 
+	limit: 30, // Limit each IP to 3 requests per `window` 
 	
 })
 const proxyroutingflight=createProxyMiddleware({
