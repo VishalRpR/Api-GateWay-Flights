@@ -46,3 +46,7 @@ Lets take a look inside the `src` folder
  ```
  npm run dev
  ```
+
+
+
+![image](https://github.com/user-attachments/assets/a2e22b5c-bac7-4b59-981f-3287673d0673)
